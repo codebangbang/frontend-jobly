@@ -3,11 +3,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Navigation from './routes-nav/Navigation';
 import Routes from './routes-nav/Routes';
 import LoadingSpinner from './common/LoadingSpinner';
-import JoblyApi from './api/api';
-import UserContext from './auth/UserContext';
-import useLocalStorage from './hooks/useLocalStorage';
+import JoblyApi from './api.js';
+// import UserContext from './auth/UserContext';
+// import useLocalStorage from './hooks/useLocalStorage';
 import jwt from 'jsonwebtoken';
 import './App.css';
+
+export const TOKEN_STORAGE_ID = 'jobly-token';
 
 function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
