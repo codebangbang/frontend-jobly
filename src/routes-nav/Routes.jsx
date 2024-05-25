@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from '../homepage/Homepage';
 import CompanyList from '../companies/CompanyList';
 import CompanyDetail from '../companies/CompanyDetail';
@@ -9,12 +9,12 @@ import LoginForm from '../auth/LoginForm';
 import SignupForm from '../auth/SignupForm';
 import PrivateRoute from './PrivateRoute';
 
-function Routes({ login, signup }) {
-    console.debug('Routes');
+function AppRoutes({ login, signup }) {
+    console.debug('AppRoutes');
     
     return (
         <div className="pt-5">
-        <Switch>
+        <Routes>
             <Route exact path="/">
                 <Homepage />
             </Route>
@@ -43,10 +43,10 @@ function Routes({ login, signup }) {
                 <ProfileForm />
             </PrivateRoute>
             
-            <Redirect to="/" />
-        </Switch>
+            <Navigate to="/" />
+        </Routes>
         </div>
     );
 }
 
-export default Routes;
+export default AppRoutes;

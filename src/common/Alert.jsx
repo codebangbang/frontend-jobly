@@ -11,3 +11,5 @@ function Alert({ type = 'danger', messages = [] }) {
     </div>
   );
 }
+
+export default Alert;
