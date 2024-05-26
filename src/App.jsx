@@ -4,8 +4,8 @@ import Navigation from './routes-nav/Navigation';
 import Routes from './routes-nav/Routes';
 import LoadingSpinner from './common/LoadingSpinner';
 import JoblyApi from './api.js';
-// import UserContext from './auth/UserContext';
-// import useLocalStorage from './hooks/useLocalStorage';
+import UserContext from './auth/UserContext';
+import useLocalStorage from './hooks/useLocalStorage';
 import jwt from 'jsonwebtoken';
 import './App.css';
 
